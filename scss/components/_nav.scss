@@ -1,6 +1,9 @@
 .header {
+    
     &__logo img {
         width: 100%;
+        
+       
     }
 
     &__nav {
@@ -9,10 +12,14 @@
         padding-right: 10px;
         padding-left: 10px;
         background-color: $color-main;
+        
+       
+        
 
 
         &-ul {
             display: flex;
+            
 
         }
 
@@ -63,27 +70,37 @@
     }
 
     &__nav {
+        
         @include mobile {
+            
             @include flex(row, space-between, center);
             height: 60px;
+            
+           
 
             &-ul {
                 @include flex(column, center, center);
                 left: 100%;
                 top: 60px;
                 width: 100%;
+                max-width: 600px;
                 position: absolute;
                 background-color: $color-main;
                 transition: .6s;
+                display: none;
+                
+                
             }
 
             &-li {
                 padding: 15px 0px;
+                
 
             }
 
             .header__nav-iconmenu {
                 display: flex;
+
             }
 
 
@@ -101,6 +118,8 @@
                 position: absolute;
                 background-color: $color-main;
                 transition: .6s;
+                display: none;
+                
             }
 
             &-li {
@@ -115,7 +134,8 @@
 
         }
 
-        .nav-menu_visible {
+        .nav-menu_visible  {
+            display: flex;            
             left: 0;
         }
 
@@ -123,6 +143,7 @@
 
     .nav-menu_visible {
         left: 0;
+        overflow: hidden;
     }
 
 
@@ -131,6 +152,7 @@
 
         .header__image-desktop {
             display: none;
+            
         }
 
 

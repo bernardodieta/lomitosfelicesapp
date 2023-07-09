@@ -1,10 +1,11 @@
+
 .refugios {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     max-width: 1440px;
     margin-top: 50px;
-
+    
     @include mobile {
         
         .refugios__container-img-desktop {
@@ -19,7 +20,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-
             &-text {
 
                 h1 {
@@ -262,4 +262,8 @@
         }
     }
 
+}
+
+.refugios__card{
+    filter:drop-shadow( 5px 5px 12px rgba(175, 175, 175, 0.5)); 
 }
