@@ -1,2171 +1,1959 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-/*##################### CSS GLOBALES ##################*/
-/*##################### INICIO ##################*/
+span {
+  color: #00A0D0;
+}
+
+.spanbold {
+  font-weight: 600;
+}
+
 body {
-
-    background-color: fff;
-    color: black;
-    font-family: Calibri, sans-serif;
-    /* background-image: url(../img/backgroundmobile.jpg); */
-
+  background-color: #ffffff;
+  color: #1E1E1E;
+  font-family: Calibri, serif;
+  /* background-image: url(../img/backgroundmobile.jpg); */
 }
 
-nav ul {
+.main__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.inputtext {
+  display: flex;
+  background-color: #e9e9e9;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 0.2rem;
+}
+
+.container-derecho .check-label {
+  font-size: 1rem;
+}
+
+#checkbox {
+  max-width: 15px;
+}
+
+.header__logo img {
+  width: 100%;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #00A0D0;
+}
+.header__nav-ul {
+  display: flex;
+}
+.header__nav-li {
+  cursor: pointer;
+  line-height: 40px;
+  padding: 0 20px;
+  transition: 0.4s;
+}
+.header__nav-li:hover {
+  background-color: #00A0D0;
+}
+.header__nav-a {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.header__nav .header__nav-iconmenu {
+  display: none;
+}
+.header__image {
+  display: flex;
+}
+.header__image .header__image-desktop {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__image .header__image-mobile {
+  display: none;
+}
+.header__logo img {
+  width: 90%;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .header__nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .header__nav-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
+    top: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: #00A0D0;
+    transition: 0.6s;
+  }
+  .header__nav-li {
+    padding: 15px 0px;
+  }
+  .header__nav .header__nav-iconmenu {
+    display: flex;
+  }
 }
-
-nav ul li {
-    cursor: pointer;
-    height: 100%;
-    padding: 0 20px;
-    transition: .4s;
-    line-height: 40px;
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .header__nav-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
+    top: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: #00A0D0;
+    transition: 0.6s;
+  }
+  .header__nav-li {
+    padding: 15px 0px;
+  }
+  .header__nav .header__nav-iconmenu {
+    display: flex;
+  }
 }
-
-nav ul li:hover {
-    background-color: #f5c47a;
-
+.header__nav .nav-menu_visible {
+  left: 0;
 }
-
-nav ul li a {
-    color: black;
-
-    font-size: 1rem;
-    font-weight: 300;
+.header .nav-menu_visible {
+  left: 0;
 }
-
-.navbar-toggler {
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .header .header__image-desktop {
     display: none;
-    height: min-content;
-    margin: 0 10px;
-    cursor: pointer;
+  }
+  .header .header__image-mobile {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-#navbar-toggler:checked~nav .nav__list {
-    transform: translateY(0);
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .header__image-desktop {
+    width: 100%;
+    max-width: 993px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .header__image-desktop {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+.btn {
+  display: flex;
+  width: 100%;
+  max-width: 260px;
+  padding: 0.8rem 0.4rem;
+  background-color: #FAFF00;
+  border-radius: 1rem;
+  font-size: 1rem;
+  letter-spacing: -0.7px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+.btn a {
+  font-weight: bold;
+  color: #1E1E1E;
+}
+.btn h4 {
+  padding: 0 10px;
 }
 
-
-input:checked~nav .nav-list {
-    z-index: 100;
-    transform: translateX(0);
+.refugios {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .refugios .refugios__container-img-desktop {
+    display: none;
+  }
+  .refugios__container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .refugios__container-text h1 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: #00A0D0;
+    text-align: center;
+  }
+  .refugios__container-text p {
+    font-size: 1.1rem;
+    color: #1E1E1E;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .refugios .-statusmobile {
+    display: none;
+  }
+  .refugios__card {
+    margin: 0 auto;
+    width: 60%;
+    background-color: #00A0D0;
+    border-radius: 1.2rem;
+    max-width: 204px;
+    text-align: center;
+  }
+  .refugios__card h3 {
+    padding: 5px 0;
+  }
+  .refugios__card h5 {
+    padding: 5px 0;
+  }
+  .refugios__card .mapita {
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .refugios__container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .refugios__container-text {
+    width: 75%;
+  }
+  .refugios__container-text h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: #00A0D0;
+    text-align: right;
+    padding: 10px 0;
+  }
+  .refugios__container-text p {
+    width: 100%;
+    font-size: 1rem;
+    color: #1E1E1E;
+    text-align: right;
+    padding: 10px 0;
+  }
+  .refugios__container-text .btn {
+    margin-right: 0px;
+  }
+  .refugios__container .refugio__container-img-mobile {
+    display: none;
+  }
+  .refugios__container-img-desktop {
+    width: 100%;
+  }
+  .refugios__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 204px;
+    background-color: #00A0D0;
+    border-radius: 1.2rem;
+  }
+  .refugios__card h3 {
+    text-align: center;
+    padding: 5px 0;
+  }
+  .refugios__card p {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+  .refugios__card h5 {
+    padding: 5px 0;
+  }
+  .refugios__card h5 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .refugios__box {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .refugios__box .mapita {
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .refugios__box .statustablet {
+    display: none;
+  }
+}
+@media screen and (min-width: 993px) {
+  .refugios__container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .refugios__container-text {
+    width: 75%;
+  }
+  .refugios__container-text h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    color: #00A0D0;
+    text-align: right;
+    padding: 10px 0;
+  }
+  .refugios__container-text p {
+    width: 100%;
+    font-size: 1.4rem;
+    color: #1E1E1E;
+    text-align: right;
+    padding: 10px 0;
+  }
+  .refugios__container-text .btn {
+    margin-right: 0px;
+  }
+  .refugios__container .refugio__container-img-mobile {
+    display: none;
+  }
+  .refugios__container-img-desktop {
+    width: 100%;
+  }
+  .refugios__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 204px;
+    background-color: #00A0D0;
+    border-radius: 1.2rem;
+  }
+  .refugios__card h3 {
+    text-align: center;
+    padding: 5px 0;
+  }
+  .refugios__card p {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+  .refugios__card h5 {
+    padding: 5px 0;
+  }
+  .refugios__card h5 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .refugios__box {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .refugios__box .mapita {
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
 }
 
-/*##################### FIN ##################*/
-/*##################### CSS GLOBALES ##################*/
-
-
-
-
-/*##################### Media Query MOBILE + 360px - 485px ##################*/
-/*##################### INICIO ##################*/
-
-@media screen and (min-width:360px) and (max-width: 485px) {
-
-    /*##################### CSS NAV ##################*/
-    /*##################### INICIO ##################*/
-    h1 {
-        font-size: 2.2rem;
-        text-align: center;
-        color: #0E3157;
-    }
-
-    .nav__img-container {
-        display: flex;
-
-    }
-
-    .contenido_principal #toggle {
-        display: none;
-    }
-
-    .label__toggler {
-        padding: 8px;
-    }
-
-
-    nav .nav__img-container .nav__img-logo {
-        padding: 5px;
-        width: 100%;
-    }
-
-    nav {
-        position: fixed;
-    }
-
-    nav ul {
-        display: flex;
-
-    }
-
-    nav .nav-list {
-        left: 0;
-        width: 100%;
-        display: grid;
-        position: absolute;
-        background: #F9B041;
-        top: 40px;
-        transform: translateX(-100%);
-        z-index: -1;
-        transition: .6s;
-    }
-
-    nav .nav-list .nav-item {
-
-        padding-left: 35px;
-    }
-
-    nav .navbar-toggler {
-        display: grid !important;
-    }
-
-
-    /*##################### CSS NAV ##################*/
-    /*##################### FIN ##################*/
-
-    /*##################### CSS PAGE:REFUGIOS INDIVIDUALES ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__refugio-indiv {
-        margin-left: auto;
-        margin-right: auto;
-
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-
-
-
-
-    }
-
-    .section__refugio-indiv h1 {
-        font-size: 3.5rem;
-        text-align: center;
-
-    }
-
-    .section__refugio-indiv h3 {
-        text-align: center;
-    }
-
-    .section__refugio-indiv-imgs {
-
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .section__refugio-indiv p {
-        margin-bottom: 20px;
-    }
-
-    .section__refugio-indiv-imgs1 img {
-        display: flex;
-        width: 100%;
-
-    }
-
-    .section__refugio-indiv-imgs1 {
-
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-
-    }
-
-    .section__refugio-indiv-gridphoto {
-        display: grid;
-
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 5px;
-    }
-
-
-    .img_mapa1 img {
-        display: flex;
-
-        max-width: 250px;
-
-    }
-
-    .btn__donativo a,
-    .btn__visita a {
-        font-size: 1.1rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-
-    }
-
-    #onlydesktop {
-        display: none;
-    }
-
-    .refugio-indiv-btns {
-
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .container-refug-btn {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .btn__donativo,
-    .btn__visita {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        margin-top: 10px;
-        width: 80%;
-        height: 2.5rem;
-        border-radius: 1rem;
-        justify-content: center;
-        align-items: center;
-        background-color: #F9B041;
-
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    /*##################### CSS PAGE:REFUGIOS INDIVIDUALES ##################*/
-    /*##################### FIN ##################*/
-
-
-    /*##################### CSS PAGE:CARTA INDIVIDUAL PERRO ##################*/
-    /*##################### INICIO ##################*/
-
-
-    .section__dog-grid-photo {
-        width: 100%;
-        display: grid;
-        grid-template-areas: "dest dest dest dest img1 img2"
-            "dest dest dest dest img3 img4";
-        align-items: center;
-
-    }
-
-    .section__dog-phto-container {
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
-    .section__dog-photo-container h1 {
-        font-size: 2.0rem;
-        padding-bottom: 30px;
-        text-align: center;
-
-    }
-
-    .dog-img-destacada {
-        width: 100%;
-        grid-area: dest;
-
-    }
-
-    .section__dog-name {
-        font-size: 1.3rem;
-        text-align: left;
-        font-weight: 300;
-    }
-
-    .img1 {
-        width: 100%;
-        grid-area: img1;
-    }
-
-    .img2 {
-        width: 100%;
-        grid-area: img2;
-    }
-
-    .img3 {
-        width: 100%;
-        grid-area: img3;
-    }
-
-    .img4 {
-        width: 100%;
-        grid-area: img4;
-    }
-
-    .section__dog-text-main {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .btn__adoptar-card a {
-
-        font-size: 1.2rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__adoptar-card {
-        display: flex;
-        margin-left: auto;
-
-        margin-top: 20px;
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 35%;
-        height: 3.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .section__dog-text-container-left {
-        margin-left: auto;
-        margin-right: auto;
-
-        display: flex;
-        flex-direction: row;
-    }
-
-    .section__dog-text-container {
-        margin-left: auto;
-        margin-right: auto;
-
-        width: 80%;
-    }
-
-    .section__dog-text-container-left h3 {
-        font-size: 1rem;
-        font-weight: 100;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-    }
-
-    .section__dog-text-container p {
-        padding-top: 5px;
-        font-size: 1.0rem;
-    }
-
-    .section__dog-responsa {
-        text-align: center;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-    }
-
-    .section__dog-responsa h3 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .section__dog-texttop {
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    /*##################### CSS PAGE:CARTA INDIVIDUAL PERRO ##################*/
-    /*##################### FIN ##################*/
-
-    /*##################### CSS PAGE:PORQUE ADOPTAR ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__porqueadoptar {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .section__porqueadoptar h1 {
-        padding-top: 20px;
-        font-size: 2.5rem;
-        padding-bottom: 20px;
-    }
-
-    .section__porqueadoptar h2 {
-        padding-top: 20px;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    .section__porqueadoptar-p1 {
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        margin-bottom: 25px;
-    }
-
-    .section__porqueadoptar-p2 {
-        width: 90%;
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        margin-bottom: 25px;
-    }
-
-
-
-    /*##################### CSS PAGE:PORQUE ADOPTAR ##################*/
-    /*##################### fin ##################*/
-
-
-    /*##################### CSS PAGE:ADOPCION MENU ##################*/
-    /*##################### INICIO ##################*/
-    .section__adopta-container {
-        margin-left: auto;
-        margin-right: auto;
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
-    .section__adopta-menu {
-        margin: 20px auto;
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .section__adopta-menu-h3icon {
-
-        display: flex;
-        flex-direction: row;
-    }
-
-    .section__adopta-main {
-        width: 60%;
-    }
-
-    .section__adopta-main-invert {
-        text-align: right;
-        width: 60%;
-    }
-
-    .section__adopta-align {
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-    }
-
-    .section__adopta-menu-h3icon-invert {
-        text-align: right;
-    }
-
-    .h4invert {
-        text-align: right;
-    }
-
-    .section__adopta-texto {
-        display: flex;
-        flex-direction: column;
-
-        width: 100%;
-        align-items: center;
-    }
-
-    .section__adopta-texto p {
-        width: 90%;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-
-    .section__adopta-texto h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .btn__verinfo a,
-    .btn__verinfo-invert a {
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-
-    .btn__verinfo {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        height: 2.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .section__adopta-textcard p {
-        overflow: hidden;
-        max-height: 155px;
-    }
-
-    .btn__verinfo-invert {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        margin-top: 10px;
-        width: 90%;
-        height: 2.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .section__menu-p_desktop {
-        display: none;
-    }
-
-
-    /*##################### CSS PAGE:ADOPCION MENU ##################*/
-    /*##################### FIN ##################*/
-
-    /*##################### CSS Template base ##################*/
-    /*##################### INICIO ##################*/
-
-    .p_desktop {
-        display: none;
-    }
-
-    .header_img-desktop {
-        display: none;
-    }
-
-    .p_desktop {
-        display: none;
-    }
-
-
-    .backgrounddesktop {
-        width: 100%;
-
-        background-image: url("../img/backgroundmobie.png");
-        background-position: left top;
-
-    }
-
-
-    .contenido_principal {
-
-        display: grid;
-        grid-template-areas:
-            "nav"
-            "foto_header"
-            "contenido"
-            "contenido2"
-            "contenido3"
-            "contenido4"
-            "footer";
-    }
-
-
-    .header img {
-        width: 100%;
-    }
-
-
-    .contenido_principal .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 40px;
-        background-color: #F9B041;
-        grid-area: nav;
-    }
-
-    .contenido_principal .header {
-        display: flex;
-        margin: 0 auto;
-        max-width: 1440px;
-        margin-top: 40px;
-        grid-area: foto_header;
-        padding-bottom: 50px;
-    }
-
-    .contenido_principal .content1 {
-
-        grid-area: contenido;
-    }
-
-
-    .contenido_principal .content2 {
-
-        grid-area: contenido2;
-    }
-
-    .contenido_principal .content3 {
-
-        grid-area: contenido3;
-    }
-
-    .contenido_principal .content4 {
-
-        grid-area: contenido4;
-    }
-
-
-
-    .contenido_principal .footer {
-
-        grid-area: footer;
-    }
-
-    /*##################### CSS Template base ##################*/
-    /*##################### FIN ##################*/
-
-
-
-
-    /*##################### CSS SECTION 1 HOME ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__card {
-        display: flex;
-        padding: 10px;
-
-    }
-
-    .section__card-img {
-        margin: auto;
-        width: 30%;
-
-    }
-
-    .card-img {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-
-    }
-
-    .section__card-text {
-        width: 70%;
-        padding: 5px;
-    }
-
-
-
-    .section__card-text p {
-
-        padding: 5px;
-    }
-
-    .section__card .section__card-text-invert {
-        text-align: right;
-        padding: 5px;
-        width: 70%;
-
-    }
-
-    .separador_img {
-
-        width: 100%;
-        max-width: 485px;
-    }
-
-    .separador {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-
-    /*##################### CSS SECTION 1 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-
-    /*##################### CSS SECTION 2 HOME ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__info-container {
-        width: 100%;
-
-        padding: 10px;
-    }
-
-    .section__info-text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .section__info-img {
-        width: 100%;
-        float: right;
-    }
-
-    .h1_especial {
-        text-align: center;
-    }
-
-
-    .section__info-img-container {
-        display: none;
-    }
-
-    .section2__h1-titulo {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*##################### CSS SECTION 2 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-    .section2__h1-titulo h1,
-    .content3 h1,
-    .content4 .section__donativo h1 {
-        text-align: center;
-        font-size: 1.8rem;
-        padding-bottom: 30px;
-    }
-
-
-    /*##################### CSS SECTION 3 HOME ##################*/
-    /*##################### FIN ##################*/
-    .section__photos {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-
-    }
-
-    .section__cards-dogs {
-
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .icon-perro {
-        height: 80%;
-        width: 50%;
-    }
-
-
-    .section__card-dog-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 76%;
-
-    }
-
-    .section__card-dog-info h3 {
-        font-size: 1.4rem;
-    }
-
-    .p_card-info {
-        width: 100%;
-        text-align: left;
-        font-size: 1.3rem;
-
-    }
-
-    .btn__adoptar a {
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__adoptar {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        width: 80%;
-        height: 3rem;
-        border-radius: 1rem;
-        grid-column: span 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    /*##################### CSS SECTION 3 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-    /*##################### CSS SECTION 4 HOME ##################*/
-    /*##################### FIN ##################*/
-    .section__donativo {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .section__card-refugio {
-        box-shadow: 4px 4px 8px #d1d1d1;
-        text-align: center;
-        background-color: #f1f1f1;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 25px;
-        border-radius: 1rem;
-        width: 80%;
-        padding: 10px;
-
-    }
-
-    .section__card-refugio-color {
-        box-shadow: 4px 4px 8px #d1d1d1;
-        text-align: center;
-        background-color: #F9B041;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 25px;
-        border-radius: 1rem;
-        width: 80%;
-        padding: 10px;
-
-    }
-
-
-    .section__doghouse img {
-        padding-top: 20px;
-        width: 60%;
-    }
-
-    .section__doghouse {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer {
-        background-color: black;
-        color: #f1f1f1;
-        min-height: 400px;
-    }
-
-    .btn__donar a {
-
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__donar {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-
-        margin-top: 20px;
-        margin-bottom: 25px;
-
-        width: 35%;
-        height: 3.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    /*##################### CSS SECTION 4 HOME ##################*/
-    /*##################### FIN ##################*/
-
-    .section__card-map img {
-        width: 100%;
-        border-radius: 0.4rem;
-    }
-
-    /*##################### CSS PAGE:REGISTRO REFUGIO ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__form-container {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-
-
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-
-    .inputtext {
-        display: flex;
-        background-color: #e9e9e9;
-        width: 100%;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        border-radius: 0.2rem;
-    }
-
-    .btn__foto a {
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__foto {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        width: 100%;
-        height: 3rem;
-        border-radius: 0.4rem;
-        grid-column: span 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .btn {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        width: 100%;
-        height: 3rem;
-        border-radius: 0.4rem;
-        grid-column: span 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-
-    }
-
-
-    .section__form-background {
-        width: 100%;
-        background-color: #f5f5f5;
-        padding-left: 5px;
-        padding-right: 5px;
-
-        margin-bottom: 50px;
-    }
-
-
-    .section__form-background h1,
-    .section__form-background p {
-        padding-top: 10px;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 10px;
-    }
-
-    .section__reguser-texto {
-        margin-bottom: 50px;
-    }
-
-
-
-    /*##################### CSS PAGE:REGISTRO REFUGIO ##################*/
-    /*##################### FIN ##################*/
-
-
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: black;
-        color: #f1f1f1;
-        min-height: 400px;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav__footer ul {
-
-        text-align: center;
-
-    }
-
-    .nav__footer {
-
-        width: 80%;
-
-    }
-
-    .nav__footer ul li {
-        padding: 5px;
-        color: #e9e9e9;
-    }
-
-    .nav__footer ul li a {
-        font-size: 1rem;
-        color: #d1d1d1;
-        font-weight: 300;
-    }
-
-    .footer__logo {
-        margin-top: 30px;
-        display: flex;
-
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer__logo img {
-        width: 80%;
-    }
-
-    .derechos {
-        margin-top: 20px;
-    }
-
-    h5 {
-        font-size: 0.6rem;
-    }
+.footer {
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+  background-color: #151515;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.footer__redes-sociales {
+  margin: 0 auto;
+}
+.footer__redes-sociales .icons-social {
+  max-width: 24px;
+}
+.footer__menu {
+  color: #FAFF00;
+  text-align: center;
+}
+.footer__menu a {
+  color: #FAFF00;
+}
+.footer__legales {
+  color: #ffffff;
 }
 
-/*##################### Media Query MOBILE ##################*/
-/*##################### FIN ##################*/
-
-
-
-/*##################### Media Query DESKTOP + 980px ~ ##################*/
-/*##################### INICIO ##################*/
-
-@media screen and (min-width:980px) {
-    .contenido_principal #toggle {
-        display: none;
-    }
-
-    .header_img-mobile {
-        display: none;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-        text-align: center;
-        color: #0E3157;
-    }
-
-    /*##################### CSS NAV ##################*/
-    /*##################### INICIO ##################*/
-
-    nav {
-
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        padding: 0 10px;
-        background-color: #F9B041;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-        position: fixed;
-        line-height: 1.1rem;
-
-    }
-
-    .backgrounddesktop {
-        margin: auto;
-        max-width: 1440px;
-        background-image: url("../img/backgroundesktop.jpg");
-        background-position: left top;
-
-    }
-
-
-    .label__toggler {
-        padding: 8px;
-    }
-
-    .nav__img-container {
-        display: flex;
-
-    }
-
-    nav .nav__img-container .nav__img-logo {
-        padding: 5px;
-
-    }
-
-    /*##################### CSS NAV ##################*/
-    /*##################### FIN ##################*/
-
-
-
-    /*##################### CSS TEMPLATE BASE HOME ##################*/
-    /*##################### INICIO ##################*/
-    .contenido_principal {
-
-        display: grid;
-        grid-template-areas:
-            "nav"
-            "foto_header"
-            "contenido"
-            "contenido2"
-            "contenido3"
-            "contenido4"
-            "footer";
-    }
-
-    .header_img-desktop {
-        display: flex;
-        margin-top: 40px;
-    }
-
-
-    .header img {
-        width: 100%;
-    }
-
-
-    .contenido_principal .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 40px;
-        background-color: #F9B041;
-        grid-area: nav;
-    }
-
-    .contenido_principal .header {
-        display: flex;
-        margin: 0 auto;
-        max-width: 1440px;
-
-        grid-area: foto_header;
-        padding-bottom: 50px;
-    }
-
-
-    .contenido_principal .content1 {
-        width: 90%;
-        max-width: 1440px;
-
-        margin-left: auto;
-        margin-right: auto;
-        grid-area: contenido;
-    }
-
-
-    .contenido_principal .content2 {
-        width: 90%;
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-        grid-area: contenido2;
-    }
-
-    .contenido_principal .content3 {
-        width: 90%;
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-        grid-area: contenido3;
-    }
-
-    .contenido_principal .content4 {
-        width: 100%;
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-        grid-area: contenido4;
-
-
-    }
-
-
-
-    .contenido_principal .footer {
-
-        grid-area: footer;
-    }
-
-    /*##################### CSS TEMPLATE BASE HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-    /*##################### CSS SECTION 1 HOME ##################*/
-    /*##################### INICIO ##################*/
-    .section__card {
-        display: flex;
-        margin-bottom: 120px;
-        padding: 10px;
-    }
-
-    .section__card-img {
-        margin: auto;
-        width: 30%;
-
-    }
-
-    .card-img {
-        width: 100%;
-        max-width: 350px;
-        display: flex;
-        flex-direction: row;
-
-    }
-
-    .section__card-text {
-        width: 70%;
-        padding: 5px;
-
-    }
-
-    .section__card-text h1 {
-        font-size: 3.5rem;
-        text-align: left;
-        padding: 5px;
-    }
-
-    .section__card-text p {
-        font-size: 1.6rem;
-        padding: 5px;
-    }
-
-    .p_desktop {
-        font-size: 1.6rem;
-        padding: 5px;
-    }
-
-    .section__card .section__card-text-invert {
-        text-align: right;
-        padding: 5px;
-        width: 70%;
-
-    }
-
-    .section__card-text-invert h1 {
-        font-size: 3.5rem;
-        padding: 5px;
-        text-align: right;
-    }
-
-    .section__card-text-invert p {
-        font-size: 1.6rem;
-        padding: 5px;
-    }
-
-    /*##################### CSS SECTION 1 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-    /*##################### CSS SECTION 2 HOME ##################*/
-    /*##################### INICIO ##################*/
-    .p__section-info {
-        font-size: 1.6rem;
-        padding: 5px;
-    }
-
-    .section__info-p-container {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-
-    }
-
-    .section__info-container {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 150px;
-    }
-
-    .section2__h1-titulo {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .section__info-img {
-
-        width: 100%;
-        max-width: 350px;
-        padding: 5px;
-    }
-
-    .section2__h1-titulo h1,
-    .content3 h1,
-    .content4 .section__donativo h1 {
-
-        font-size: 3.5rem;
-        padding-bottom: 30px;
-    }
-
-    .h1_especial {
-        text-align: right;
-    }
-
-    .section__info-text {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .section__info-img2 {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-    .separador_img {
-
-        width: 100%;
-        max-width: 485px;
-
-    }
-
-    .separador {
-        display: flex;
-
-        width: 100%;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        justify-content: center;
-    }
-
-    /*##################### CSS SECTION 2 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-
-
-
-    /*##################### CSS SECTION 3 HOME ##################*/
-    /*##################### INICIO ##################*/
-    .section__photos {
-        margin: 0px auto;
-        width: 70%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-
-    }
-
-    .section__photos a {
-        color: #0E3157;
-    }
-
-    .section__cards-dogs {
-
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-
-    .section__card-dog-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        width: 76%;
-
-    }
-
-    .icon-perro {
-        height: 23px;
-        width: auto;
-    }
-
-    .section__card-dog-info h3 {
-        font-size: 1.4rem;
-        padding-bottom: 5px;
-        padding-right: 8px;
-
-    }
-
-    .p_card-info {
-        width: 100%;
-        text-align: left;
-        font-size: 1.3rem;
-
-    }
-
-    .btn__adoptar a {
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__adoptar {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        width: 80%;
-        height: 3rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    /*##################### CSS SECTION 3 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-
-    /*##################### CSS SECTION 4 HOME ##################*/
-    /*##################### INICIO ##################*/
-
-    .btn__donar a {
-
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__donar {
-        display: flex;
-        margin-left: auto;
-
-        margin-top: 20px;
-        margin-bottom: 25px;
-
-        width: 35%;
-        height: 3.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .section__donativo {
-        text-align: right;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        margin-left: auto;
-
-
-
-    }
-
-    .h1_especial {
-        text-align: right;
-
-    }
-
-    .p__section-donativo {
-        margin-left: auto;
-        width: 70%;
-        line-height: 1.4rem;
-    }
-
-    .section__card-refugio {
-        box-shadow: 4px 4px 8px #d1d1d1;
-        text-align: center;
-        background-color: #f5f5f5;
-        margin: auto;
-        border-radius: 1rem;
-        width: 75%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .section__card-refugio-color {
-
-        box-shadow: 4px 4px 8px #d1d1d1;
-        text-align: center;
-        background-color: #F9B041;
-        margin: auto;
-        border-radius: 1rem;
-        width: 75%;
-        padding-left: 10px;
-        padding-right: 10px;
-
-    }
-
-    .section__refugio-container {
-        width: 100%;
-        max-width: 1440px;
-        background-color: #d1d1d1;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        padding-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 20px;
-        margin-bottom: 150px;
-
-
-    }
-
-
-    .section__card-map img {
-        width: 100%;
-        border-radius: 0.4rem;
-    }
-
-    .section__box-container {
-        padding-left: 45px;
-        padding-right: 45px;
-        display: flex;
-        flex-direction: row;
-
-    }
-
-    .section__doghouse img {
-        padding-top: 20px;
-        width: 60%;
-    }
-
-    .section__doghouse {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*##################### CSS SECTION 4 HOME ##################*/
-    /*##################### FIN ##################*/
-
-
-
-    /*##################### CSS PAGE:PORQUE ADOPTAR ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__porqueadoptar {
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .section__porqueadoptar h1 {
-        padding-top: 20px;
-        font-size: 3.5rem;
-        padding-bottom: 20px;
-    }
-
-    .section__porqueadoptar h2 {
-        padding-top: 20px;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    .section__porqueadoptar-p1 {
-        text-align: center;
-        font-size: 1.3rem;
-        line-height: 1.7rem;
-        margin-bottom: 25px;
-    }
-
-    .section__porqueadoptar-p2 {
-        width: 90%;
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        margin-bottom: 25px;
-    }
-
-
-
-    /*##################### CSS PAGE:PORQUE ADOPTAR ##################*/
-    /*##################### fin ##################*/
-
-
-    /*##################### CSS PAGE:ADOPCION MENU ##################*/
-    /*##################### INICIO ##################*/
-    .section__adopta-container {
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
-    .section__adopta-menu {
-        margin: 20px auto;
-        border-radius: 0.5rem;
-        width: 90%;
-        background-color: #f3f3f3;
-        display: flex;
-        flex-direction: row;
-        box-shadow: 4px 4px 8px #d1d1d1;
-        justify-content: center;
-        padding: 10px;
-
-    }
-
-    .section__adopta-menu-h3icon {
-
-        display: flex;
-        flex-direction: row;
-    }
-
-    .section__adopta-main {
-        width: 80%;
-    }
-
-    .section__adopta-main-invert {
-        text-align: right;
-        width: 80%;
-    }
-
-    .section__adopta-align {
-        margin-top: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-    }
-
-    .section__adopta-menu-h3icon-invert {
-        text-align: right;
-    }
-
-    .h4invert {
-        text-align: right;
-    }
-
-    .section__adopta-texto {
-        display: flex;
-        flex-direction: column;
-
-        width: 100%;
-        align-items: center;
-    }
-
-    .section__adopta-texto p {
-        width: 80%;
-        font-size: 1.4rem;
-    }
-
-    .section__adopta-texto h1 {
-        font-size: 3.5rem;
-    }
-
-    .btn__verinfo a,
-    .btn__verinfo-invert a {
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-
-    .btn__verinfo {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-
-        width: 90%;
-        height: 2.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .btn__verinfo-invert {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-
-        width: 90%;
-        height: 2.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-
-    /*##################### CSS PAGE:ADOPCION MENU ##################*/
-    /*##################### FIN ##################*/
-
-    /*##################### CSS PAGE:REFUGIOS INDIVIDUALES ##################*/
-    /*##################### INICIO ##################*/
-
-    .section__refugio-indiv {
-        margin-left: auto;
-        margin-right: auto;
-
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-
-
-
-
-    }
-
-    .section__refugio-indiv h1 {
-        font-size: 3.5rem;
-        text-align: center;
-
-    }
-
-    .section__refugio-indiv-imgs {
-
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .section__refugio-indiv p {
-        margin-bottom: 20px;
-    }
-
-    .section__refugio-indiv-imgs1 img {
-        display: flex;
-        width: 100%;
-
-    }
-
-    .section__refugio-indiv-imgs1 {
-
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-
-    }
-
-    .section__refugio-indiv-gridphoto {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 5px;
-    }
-
-
-    .img_mapa1 img {
-        display: flex;
-
-        max-width: 250px;
-
-    }
-
-    .btn__donativo a,
-    .btn__visita a {
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .refugio-indiv-btns {
-
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .container-refug-btn {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .btn__donativo,
-    .btn__visita {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        margin-top: 10px;
-        width: 80%;
-        height: 2.5rem;
-        border-radius: 1rem;
-
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    /*##################### CSS PAGE:REFUGIOS INDIVIDUALES ##################*/
-    /*##################### FIN ##################*/
-
-
-    /*##################### CSS PAGE:CARTA INDIVIDUAL PERRO ##################*/
-    /*##################### INICIO ##################*/
-
-
-    .section__dog-grid-photo {
-        width: 100%;
-        display: grid;
-        grid-template-areas: "dest dest dest dest img1 img2"
-            "dest dest dest dest img3 img4";
-        align-items: center;
-
-    }
-
-    .section__dog-phto-container {
-        width: 80%;
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-
-
-    }
-
-    .section__dog-phto-container h1 {
-        font-size: 3.5rem;
-        padding-top: 25px;
-        padding-bottom: 40px;
-        text-align: center;
-
-    }
-
-    .dog-img-destacada {
-        width: 100%;
-        grid-area: dest;
-
-    }
-
-    .section__dog-name {
-        font-size: 2.3rem;
-        text-align: left;
-        font-weight: 300;
-    }
-
-    .img1 {
-        width: 100%;
-        grid-area: img1;
-    }
-
-    .img2 {
-        width: 100%;
-        grid-area: img2;
-    }
-
-    .img3 {
-        width: 100%;
-        grid-area: img3;
-    }
-
-    .img4 {
-        width: 100%;
-        grid-area: img4;
-    }
-
-    .btn__adoptar-card a {
-
-        font-size: 1.2rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__adoptar-card {
-        display: flex;
-        margin-left: auto;
-
-        margin-top: 20px;
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 35%;
-        height: 3.5rem;
-        border-radius: 1rem;
-        grid-column: 2 / 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .section__dog-text-main {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .section__dog-text-container-left {
-        width: 20%;
-    }
-
-    .section__dog-text-container {
-        width: 80%;
-    }
-
-    .section__dog-text-container-left h3 {
-        font-weight: 100;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-    }
-
-    .section__dog-text-container p {
-        padding-top: 5px;
-        font-size: 1.2rem;
-    }
-
-    .section__dog-responsa {
-        margin-top: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-    }
-
-    .section__dog-responsa h3 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .section__dog-texttop {
-        font-size: 1.2rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .section__dog-texttop h1 {
-        font-size: 3.5rem;
-
-    }
-
-    /*##################### CSS PAGE:CARTA INDIVIDUAL PERRO ##################*/
-    /*##################### FIN ##################*/
-
-    /*##################### CSS PAGE:REGISTRO REFUGIO ##################*/
-    /*##################### INICIO ##################*/
-    .section__form-container {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: start;
-        justify-content: space-between;
-        gap: 100px;
-
-    }
-
-
-    .inputtext {
-        display: flex;
-        background-color: #e9e9e9;
-        width: 100%;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        border-radius: 0.2rem;
-    }
-
-    .btn__foto a {
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: black;
-        text-decoration: none;
-
-    }
-
-    .btn__foto {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 25px;
-        width: 100%;
-        height: 3rem;
-        border-radius: 0.4rem;
-        grid-column: span 2;
-        background-color: #F9B041;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 4px 4px 8px #d1d1d1;
-
-    }
-
-    .container-derecho {
-        width: 100%;
-    }
-
-    .section__form-background {
-        background-color: #f5f5f5;
-
-        padding-left: 80px;
-        padding-right: 80px;
-        width: 900px;
-        margin-bottom: 50px;
-    }
-
-
-    .section__form-background h1,
-    .section__form-background p {
-        padding-top: 10px;
-        text-align: center;
-        padding-bottom: 10px;
-    }
-
-    .section__reguser-texto {
-        margin-bottom: 50px;
-    }
-
-    .section__reguser-texto h3 {
-        text-align: center;
-    }
-
-
-    /*##################### CSS PAGE:REGISTRO REFUGIO ##################*/
-    /*##################### FIN ##################*/
-
-
-
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: black;
-        color: #f1f1f1;
-        min-height: 400px;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav__footer ul {
-
-        text-align: center;
-
-    }
-
-    .nav__footer {
-
-        width: 80%;
-
-    }
-
-    .nav__footer ul li {
-        padding: 5px;
-        color: #e9e9e9;
-    }
-
-    .nav__footer ul li a {
-        font-size: 1rem;
-        color: #d1d1d1;
-        font-weight: 300;
-    }
-
-    .footer__logo {
-        margin-top: 30px;
-        display: flex;
-
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer__logo img {
-        width: 80%;
-    }
-
-    .derechos {
-        margin-top: 20px;
-    }
+.background__refugiomain {
+  background-image: url("../content_edit/img/refugioscard/background.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  object-fit: cover;
 }
 
+/* .background {
+    @include mobile {
+        width: 100%;
+        background-image: url("../content_edit/backmobile.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
 
 
-/*##################### Media Query DESKTOP ##################*/
-/*##################### FIN ##################*/
+    }
+
+    @include tablet {
+        width: 100%;
+        background-image: url("../content_edit/img/background/backdesktop.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+        max-width: 993px;
+    }
+
+    @include desktop {
+        width: 100%;
+        background-image: url("../content_edit/img/background/backdesktop.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+        max-width: 1280px;
+        @include margin(auto, auto);
+    }
+
+}
+
+.background2 {
+    @include mobile {
+        width: 100%;
+        background-image: url("../content_edit/background/backmobile2.png");
+        background-repeat: no-repeat;
+        background-position-y: 260px;
+        background-position: top right;
+        background-size: cover;
+
+
+    }
+
+
+} */
+.section__container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.section__container .section__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .section__container {
+    width: 100%;
+    min-width: 340px;
+  }
+  .section__container .card-img-desktop {
+    display: none;
+  }
+  .section__container .p__desktop-invert {
+    display: none;
+  }
+  .section__container .section__card-text-vertical-desktop {
+    display: none;
+  }
+  .section__container .card-img-desktop-invert {
+    display: none;
+  }
+  .section__container .section__card-text {
+    width: 100%;
+  }
+  .section__container .section__card-text h1 {
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+  }
+  .section__container .section__card-text h2 {
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  .section__container .section__card-text p {
+    width: 100%;
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+  .section__container .section__card-text .h1invert {
+    text-align: right;
+    color: #FAFF00;
+    padding-right: 15px;
+  }
+  .section__container .section__card-text .pinvert {
+    padding-right: 15px;
+    text-align: right;
+  }
+  .section__container .section__card-vertical {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .section__container .section__card-vertical .pvertical {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical {
+    display: flex;
+    width: 100%;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical .card-img-mobile-invert {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 220px;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+  .section__container .p__desktop {
+    display: none;
+  }
+  .section__container .section__card-img {
+    width: 90%;
+  }
+  .section__container .section__card-img .card-img-mobile {
+    display: flex;
+    padding-top: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  .section__container .section__h1-titulo {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .section__container .section__info-text {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+  .section__container .section__info-img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .section__container {
+    width: 100%;
+    max-width: 993px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section__container .card-img-mobile {
+    display: none;
+  }
+  .section__container .p__desktop-invert {
+    display: none;
+  }
+  .section__container .section__card-text-vertical-desktop {
+    display: none;
+  }
+  .section__container .section__card {
+    padding-top: 50px;
+  }
+  .section__container .section__card .section__card-text {
+    width: 70%;
+  }
+  .section__container .section__card .section__card-text .p__desktop {
+    display: none;
+  }
+  .section__container .section__card .section__card-text h1 {
+    line-height: 2rem;
+    padding-left: 40px;
+    font-size: 2.5rem;
+  }
+  .section__container .section__card .section__card-text h2 {
+    line-height: 2rem;
+    padding-left: 40px;
+    font-size: 2rem;
+  }
+  .section__container .section__card .section__card-text p {
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 1.4rem;
+  }
+  .section__container .section__card .section__card-text .h1invert {
+    color: #FAFF00;
+    padding-right: 40px;
+    text-align: right;
+  }
+  .section__container .section__card .section__card-text .pinvert {
+    padding-right: 40px;
+    text-align: right;
+  }
+  .section__container .section__card .section__card-img {
+    display: flex;
+  }
+  .section__container .section__card .section__card-img .card-img-desktop {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .section__container .section__card-vertical {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .section__container .section__card-vertical .card-img-mobile-invert {
+    display: none;
+  }
+  .section__container .section__card-vertical .section__card-text-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical {
+    width: 100%;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical .card-img-desktop-invert {
+    width: 30%;
+  }
+  .section__container .section__card-vertical h1 {
+    line-height: 2rem;
+    padding-left: 40px;
+    font-size: 2.5rem;
+  }
+  .section__container .section__card-vertical p {
+    padding: 10px 0;
+    font-size: 1.4rem;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .section__container {
+    width: 80%;
+    max-width: 1440px;
+  }
+  .section__container .section__card {
+    padding-top: 80px;
+  }
+  .section__container .section__card .card-img-desktop {
+    max-width: 320px;
+  }
+  .section__container .p__desktop {
+    display: flex;
+  }
+  .section__container .card-img-mobile {
+    display: none;
+  }
+  .section__container .section__card-text {
+    width: 100%;
+  }
+  .section__container .section__card-text h1 {
+    width: 100%;
+    font-size: 3.5rem;
+  }
+  .section__container .section__card-text h2 {
+    font-size: 1.8rem;
+  }
+  .section__container .section__card-text p {
+    width: 90%;
+    font-size: 1.4rem;
+    font-weight: 100;
+  }
+  .section__container .section__card-text .h1invert {
+    color: #FAFF00;
+    width: 100%;
+    text-align: right;
+  }
+  .section__container .section__card-text .pinvert {
+    width: 100%;
+    text-align: right;
+  }
+  .section__container .section__card-text .p__desktop-invert {
+    width: 100%;
+    text-align: right;
+  }
+  .section__container .section__h1-titulo {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .section__container .section__info-text {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+  .section__container .section__info-text p {
+    font-size: 1.4rem;
+  }
+  .section__container .section__info-text .section__info-img {
+    width: 100%;
+  }
+  .section__container .section__info-text .section__info-img-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .section__container .section__info-text .section__info-img-container .section__info-img {
+    width: 100%;
+  }
+  .section__container .section__card-vertical {
+    display: flex;
+    flex-direction: row;
+    padding-top: 80px;
+    align-items: center;
+  }
+  .section__container .section__card-vertical .card-img-mobile-invert {
+    display: none;
+  }
+  .section__container .section__card-vertical .section__card-text-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__container .section__card-vertical .section__card-img-vertical .card-img-desktop-invert {
+    width: 80%;
+  }
+  .section__container .section__card-vertical .left {
+    width: 100%;
+    text-align: left;
+    font-weight: 100;
+  }
+  .section__container .section__card-vertical .right {
+    width: 100%;
+    text-align: right;
+    font-weight: 100;
+  }
+  .section__container .section__card-vertical h1 {
+    line-height: 2rem;
+    font-size: 2.5rem;
+  }
+  .section__container .section__card-vertical .h1color {
+    color: #FAFF00;
+  }
+  .section__container .section__card-vertical p {
+    padding: 10px 0;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
+
+.feliz {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .feliz {
+    max-width: 576px;
+  }
+  .feliz__img-desktop {
+    display: none;
+  }
+  .feliz .feliz__img-mobile {
+    display: flex;
+    padding-top: 20px;
+  }
+  .feliz__text {
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .feliz__text h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .feliz__text p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding-top: 10px;
+  }
+  .feliz__imgs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .feliz__imgs-container .feliz__img1 {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .feliz {
+    display: flex;
+    width: 100%;
+    padding-top: 80px;
+  }
+  .feliz .feliz__img-desktop img {
+    width: 100%;
+  }
+  .feliz .feliz__img-mobile {
+    display: none;
+  }
+  .feliz .feliz__img1 {
+    display: none;
+  }
+  .feliz .feliz__text {
+    display: none;
+  }
+}
+@media screen and (min-width: 993px) {
+  .feliz {
+    display: flex;
+    width: 100%;
+    padding-top: 80px;
+  }
+  .feliz .feliz__img-mobile {
+    display: none;
+  }
+  .feliz .feliz__img1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card .--status {
+    display: none;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .card {
+    padding-top: 50px;
+  }
+  .card .card__carusel-main {
+    width: 70%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .card .card__text {
+    width: 100%;
+  }
+  .card .card__text h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding: 0 20px;
+  }
+  .card .card__text .card__separador {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .card .card__text .card__separador .card-sep {
+    max-width: 150px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .card .pmobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 993px) {
+  .card {
+    padding-top: 50px;
+  }
+  .card .card__carusel-main {
+    width: 80%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card .card__text {
+    width: 100%;
+  }
+  .card .card__text h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    padding: 0 20px;
+  }
+  .card .card__text .card__separador {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .card .card__text .card__separador .card-sep {
+    max-width: 350px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .card .pmobile {
+    display: none;
+  }
+}
+.card__text h1 {
+  color: #00A0D0;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 10px 0;
+}
+.card__text p {
+  display: flex;
+  width: 75%;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card__carusel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card__carusel-container .img1-carusel {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  z-index: 1;
+}
+.card__carusel-container .box {
+  width: 100%;
+  max-width: 212px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: aliceblue;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+}
+.card__carusel-container .card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+.card__carusel-container .card__header h3 {
+  color: #1E1E1E;
+}
+.card__carusel-container p {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.adopcion {
+  padding-top: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.adopcion h1 {
+  font-size: 3.5rem;
+  color: #00A0D0;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .adopcion h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .adopcion h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+    line-height: 2rem;
+  }
+}
+.adopcion__galeria {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.adopcion__galeria .imgdestacada {
+  width: 100%;
+}
+.adopcion__galeria .imgs {
+  width: 100%;
+}
+.adopcion__galeria .adopcion__galeria-imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .adopcion__galeria .adopcion__galeria-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.adopcion__description {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.adopcion__description-box {
+  width: 20%;
+}
+.adopcion__description-text {
+  width: 100%;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .adopcion__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .adopcion__description-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .adopcion__description p {
+    padding: 10px 0;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .adopcion__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .adopcion__description-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .adopcion__description p {
+    padding: 10px 0;
+  }
+}
+.adopcion__btns {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 10px;
+}
+.adopcion__btns .btn {
+  min-width: 200px;
+}
+.adopcion__compromiso {
+  margin-top: 50px;
+  width: 80%;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .adopcion__compromiso {
+    margin-top: 20px;
+  }
+}
+.adopcion__compromiso ol li {
+  list-style: disc;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .menuadopcion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menuadopcion__text {
+    margin-top: 30px;
+  }
+  .menuadopcion__text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #00A0D0;
+  }
+  .menuadopcion__text p {
+    width: 80%;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menuadopcion__listcard {
+    width: 100%;
+  }
+  .menuadopcion__listcard-box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 319px;
+    background-color: rgb(236, 236, 236);
+    margin: 10px auto;
+    gap: 10px;
+    border-radius: 1rem;
+  }
+  .menuadopcion__listcard-box .imgcontainer {
+    display: flex;
+    width: 60%;
+    align-items: flex-start;
+  }
+  .menuadopcion__listcard-box .imgcontainer .img-menucard {
+    width: 100%;
+    object-fit: contain;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px auto;
+    width: 70%;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title-icon {
+    width: 50%;
+    max-width: 50px;
+    max-height: 15px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content p {
+    padding: 0 2px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .menuadopcion {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menuadopcion__text {
+    margin-top: 30px;
+  }
+  .menuadopcion__text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #00A0D0;
+  }
+  .menuadopcion__text p {
+    width: 80%;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menuadopcion__listcard {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menuadopcion__listcard-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 420px;
+    background-color: rgb(236, 236, 236);
+    margin: 10px auto;
+    gap: 10px;
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  }
+  .menuadopcion__listcard-box .imgcontainer {
+    display: flex;
+    width: 30%;
+    align-items: flex-start;
+  }
+  .menuadopcion__listcard-box .imgcontainer .img-menucard {
+    width: 118px;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px auto;
+    width: 70%;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title-icon {
+    width: 50%;
+    max-width: 50px;
+    max-height: 15px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content p {
+    padding: 0 2px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .menuadopcion {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menuadopcion__text {
+    margin-top: 30px;
+  }
+  .menuadopcion__text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #00A0D0;
+  }
+  .menuadopcion__text p {
+    width: 80%;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menuadopcion__listcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menuadopcion__listcard-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 420px;
+    background-color: rgb(236, 236, 236);
+    margin: 10px auto;
+    gap: 10px;
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  }
+  .menuadopcion__listcard-box .imgcontainer {
+    display: flex;
+    width: 30%;
+    align-items: flex-start;
+  }
+  .menuadopcion__listcard-box .imgcontainer .img-menucard {
+    width: 100%;
+    max-width: 218px;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px auto;
+    width: 70%;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content .card-title-icon {
+    width: 50%;
+    max-width: 50px;
+    max-height: 15px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .menuadopcion__listcard-box .menuadopcion__listcard-content p {
+    padding: 0 2px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .porqueadoptar {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .porqueadoptar h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .porqueadoptar-p1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .porqueadoptar-p1 p {
+    width: 100%;
+    text-align: center;
+  }
+  .porqueadoptar h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .porqueadoptar p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .porqueadoptar {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .porqueadoptar h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .porqueadoptar-p1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .porqueadoptar-p1 p {
+    width: 100%;
+    text-align: center;
+  }
+  .porqueadoptar h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .porqueadoptar p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  .porqueadoptar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .porqueadoptar h1 {
+    color: #00A0D0;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .porqueadoptar-p1 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .porqueadoptar-p1 p {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+  }
+  .porqueadoptar h2 {
+    color: #00A0D0;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .porqueadoptar p {
+    font-size: 1.4rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .background .section__form-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: start;
+    margin: 20px auto;
+    justify-content: space-between;
+  }
+  .background .section__form-container .container-derecho {
+    width: 100%;
+  }
+  .background .section__form-container .container-derecho h2 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .background .section__form-container .container-derecho label {
+    font-size: 1.1rem;
+  }
+  .background .section__form-container .container-derecho .inputtext {
+    display: flex;
+    background-color: #e9e9e9;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 0.2rem;
+  }
+  .background .section__form-container .container-check {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+  }
+  .background .section__form-container .container-check label {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .background .section__form-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: start;
+    margin: 20px auto;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .background .section__form-container .container-derecho {
+    width: 100%;
+  }
+  .background .section__form-container .container-derecho h2 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .background .section__form-container .container-derecho label {
+    font-size: 1.1rem;
+  }
+  .background .section__form-container .container-check {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+  }
+  .background .section__form-container .container-check label {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  .background .section__form-container {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-items: start;
+    margin: 20px auto;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .background .section__form-container .container-derecho {
+    width: 100%;
+  }
+  .background .section__form-container .container-derecho h2 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .background .section__form-container .container-derecho label {
+    font-size: 1.1rem;
+  }
+  .background .section__form-container .container-derecho .inputtext {
+    display: flex;
+    background-color: #e9e9e9;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 0.2rem;
+  }
+  .background .section__form-container .container-check {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+  }
+  .background .section__form-container .container-check label {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .section__reguser-texto {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section__reguser-texto h1 {
+    margin: 20px auto;
+    font-size: 1.8rem;
+    color: #00A0D0;
+  }
+  .section__reguser-texto p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .section__reguser-texto {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section__reguser-texto h1 {
+    margin: 20px auto;
+    font-size: 1.8rem;
+    color: #00A0D0;
+  }
+  .section__reguser-texto p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  .section__reguser-texto {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section__reguser-texto h1 {
+    margin: 20px auto;
+    font-size: 1.8rem;
+    color: #00A0D0;
+  }
+  .section__reguser-texto p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+}
+
+.section__form-container {
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .section__form-container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .section__form-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .section__form-container {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .section__reguser-texto h1 {
+    font-size: 3.5rem;
+  }
+  .section__reguser-texto p {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+  .section__reguser-texto .pbeneficio {
+    font-size: 1rem;
+  }
+}
+
+.h2titulo {
+  margin: 50px auto;
+  width: 100%;
+  text-align: center;
+  color: #00A0D0;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .h2titulo {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .h2titulo {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  .h2titulo {
+    font-size: 2.5rem;
+  }
+}
+
+.porqueadoptar {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .porqueadoptar h1 {
+    color: #00A0D0;
+    font-size: 1.8rem;
+  }
+  .porqueadoptar h2 {
+    font-size: 1.3rem;
+  }
+  .porqueadoptar-p2 {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .porqueadoptar h1 {
+    color: #00A0D0;
+    font-size: 2.5rem;
+  }
+  .porqueadoptar h2 {
+    font-size: 2rem;
+  }
+  .porqueadoptar-p2 {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  .porqueadoptar h1 {
+    font-size: 3.5rem;
+  }
+  .porqueadoptar-p2 {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .refugiosmain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .refugiosmain h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+  .refugiosmain .areatablet {
+    text-align: center;
+    width: 80%;
+  }
+  .refugiosmain__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .refugiosmain__grid .fotospan {
+    width: 100%;
+    max-width: 300px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .refugiosmain__grid .fotos {
+    width: 80%;
+    padding: 10px 0;
+  }
+  .refugiosmain__grid .mapa-info {
+    margin-top: 20px;
+  }
+  .refugiosmain__grid .mapa-info h4 {
+    margin: 5px auto;
+  }
+  .refugiosmain__grid .mapa-info .maparef {
+    width: 95%;
+  }
+  .refugiosmain__grid .refugios__fotitos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .refugiosmain__textbox {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .refugiosmain__textbox .refugiomain__textos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .refugiosmain__textbox .refugiomain__textos h3 {
+    font-size: 1.5rem;
+  }
+  .refugiosmain__textbox .refugiomain__textos h5 {
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .--desktop {
+    display: none;
+  }
+  .refugiosmain__textbox .area {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .areaayuda {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .refugiosmain__textbox .areaayuda li {
+    font-size: 1rem;
+    list-style: disc;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 993px) {
+  .refugiosmain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .refugiosmain h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+  .refugiosmain .areatablet {
+    text-align: center;
+    width: 80%;
+  }
+  .refugiosmain__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .refugiosmain__grid .fotospan {
+    width: 100%;
+    max-width: 300px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .refugiosmain__grid .fotos {
+    width: 80%;
+    padding: 10px 0;
+  }
+  .refugiosmain__grid .mapa-info {
+    margin-top: 20px;
+  }
+  .refugiosmain__grid .mapa-info h4 {
+    margin: 5px auto;
+  }
+  .refugiosmain__grid .mapa-info .maparef {
+    width: 95%;
+  }
+  .refugiosmain__grid .refugios__fotitos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .refugiosmain__textbox {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .refugiosmain__textbox .refugiomain__textos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .refugiosmain__textbox .refugiomain__textos h3 {
+    font-size: 1.5rem;
+  }
+  .refugiosmain__textbox .refugiomain__textos h5 {
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .--desktop {
+    display: none;
+  }
+  .refugiosmain__textbox .area {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .areaayuda {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .refugiosmain__textbox .areaayuda li {
+    font-size: 1rem;
+    list-style: disc;
+  }
+}
+@media screen and (min-width: 993px) {
+  .refugiosmain {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .refugiosmain__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .refugiosmain__grid .fotospan {
+    width: 100%;
+    max-width: 350px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .refugiosmain__grid .fotos {
+    width: 80%;
+    padding: 10px 0;
+  }
+  .refugiosmain__grid .mapa-info {
+    margin-top: 20px;
+  }
+  .refugiosmain__grid .mapa-info h4 {
+    margin: 5px auto;
+  }
+  .refugiosmain__grid .mapa-info .maparef {
+    width: 95%;
+  }
+  .refugiosmain__grid .refugios__fotitos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .refugiosmain__textbox {
+    width: 100%;
+  }
+  .refugiosmain__textbox .refugiomain__textos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .refugiosmain__textbox .refugiomain__textos h3 {
+    font-size: 1.5rem;
+  }
+  .refugiosmain__textbox .refugiomain__textos h5 {
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .refugiomain__textos .refugiomain__textos-btns {
+    margin-left: auto;
+  }
+  .refugiosmain__textbox .area {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .refugiosmain__textbox .areaayuda {
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .refugiosmain__textbox .areaayuda li {
+    font-size: 1rem;
+    list-style: disc;
+  }
+  .refugiosmain .--tablet {
+    display: none;
+  }
+}
+
+.--width {
+  width: 90%;
+}
+
+/*# sourceMappingURL=styles.css.map */

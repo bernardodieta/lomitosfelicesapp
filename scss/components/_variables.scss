@@ -1,0 +1,41 @@
+$color-main:#00A0D0;
+$color-second:#FAFF00;
+$color-black:#1E1E1E;
+$color-griss:#3A3A3A;
+$color-withe:#ffffff;
+
+$font-family: Calibri;
+
+
+$h1desktop:3.5rem;
+$h2desktop:2.5rem;
+$h3desktop:1.5rem;
+$h4desktop:1.2rem;
+$h5desktop:1rem;
+$pdesktop:1.4rem;
+$navdesktop:1.1rem;
+
+$h1tablet:2.5rem;
+$h2tablet:2.0rem;
+$h3tablet:1.5rem;
+$h4tablet:1.2rem;
+$ptablet:1.4rem;
+$navtablet:1.1rem;
+
+
+$h1mobile:1.8rem;
+$h2mobile:1.3rem;
+$h3mobile:1rem;
+$h4mobile:1rem;
+$pmobile:1.1rem;
+$navmobile:1.1rem;
+
+
+
+span {
+    color: $color-main;
+}
+
+.spanbold{
+    font-weight: 600;
+}

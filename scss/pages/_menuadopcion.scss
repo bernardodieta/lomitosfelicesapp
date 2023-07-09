@@ -1,0 +1,261 @@
+.menuadopcion {
+
+    @include mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__text {
+            margin-top: 30px;
+
+            h1 {
+                font-size: $h1mobile;
+                text-align: center;
+                color: $color-main;
+            }
+
+            p {
+                width: 80%;
+                padding: 10px 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+
+        &__listcard {
+            width: 100%;
+
+            &-box {
+                display: flex;
+                flex-direction: row;
+                width: 80%;
+                max-width: 319px;
+                background-color: rgb(236, 236, 236);
+                margin: 10px auto;
+                gap: 10px;
+                border-radius: 1rem;
+
+
+
+                .imgcontainer {
+                    display: flex;
+                    width: 60%;
+                    align-items: flex-start;
+
+                    .img-menucard {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+
+                }
+
+                .menuadopcion__listcard-content {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 10px auto;
+                    width: 70%;
+
+                    .card-title {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .card-title-icon {
+                        width: 50%;
+                        max-width: 50px;
+                        max-height: 15px;
+                        margin-left: 20px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+
+                    p {
+                        padding: 0 2px;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    @include tablet {
+        width: 90%;
+        margin: 0 auto;
+
+        &__text {
+            margin-top: 30px;
+
+            h1 {
+                font-size: $h1mobile;
+                text-align: center;
+                color: $color-main;
+            }
+
+            p {
+                width: 80%;
+                padding: 10px 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        &__listcard {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            &-box {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                max-width: 420px;
+                background-color: rgb(236, 236, 236);
+                margin: 10px auto;
+                gap: 10px;
+                border-radius: .5rem 5rem .5rem .5rem;
+
+
+
+                .imgcontainer {
+                    display: flex;
+                    width: 30%;
+                    align-items: flex-start;
+
+                    .img-menucard {
+                        width: 118px;
+
+
+                    }
+
+                }
+
+                .menuadopcion__listcard-content {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 10px auto;
+                    width: 70%;
+
+                    .card-title {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .card-title-icon {
+                        width: 50%;
+                        max-width: 50px;
+                        max-height: 15px;
+                        margin-left: 20px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+
+                    p {
+                        padding: 0 2px;
+                    }
+                }
+
+
+            }
+        }
+    }
+    @include desktop{
+        width: 90%;
+        margin: 0 auto;
+
+        &__text {
+            margin-top: 30px;
+
+            h1 {
+                font-size: $h1mobile;
+                text-align: center;
+                color: $color-main;
+            }
+
+            p {
+                width: 80%;
+                padding: 10px 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        &__listcard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            &-box {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                max-width: 420px;
+                background-color: rgb(236, 236, 236);
+                margin: 10px auto;
+                gap: 10px;
+                border-radius: .5rem 5rem .5rem .5rem;
+
+
+
+                .imgcontainer {
+                    display: flex;
+                    width: 30%;
+                    align-items: flex-start;
+
+                    .img-menucard {
+                        width: 100%;
+                        max-width: 218px;
+
+
+                    }
+
+                }
+
+                .menuadopcion__listcard-content {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 10px auto;
+                    width: 70%;
+
+                    .card-title {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .card-title-icon {
+                        width: 50%;
+                        max-width: 50px;
+                        max-height: 15px;
+                        margin-left: 20px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+
+                    p {
+                        padding: 0 2px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

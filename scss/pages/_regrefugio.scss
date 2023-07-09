@@ -1,0 +1,74 @@
+.section__form-container {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    
+    @include mobile {
+        
+        flex-direction: column;
+        
+       
+    }
+
+    @include tablet {
+       
+        flex-direction: row;
+        gap: 20px;
+       
+
+    }
+
+    @include desktop {
+       
+        flex-direction: row;
+        gap: 60px;
+       
+
+    }
+   
+
+}
+.section__reguser-texto{
+    @include mobile {
+
+
+    }
+    @include tablet {
+
+        
+    }
+    @include desktop {
+        h1{
+            font-size: $h1desktop;
+        }
+        p{
+            width: 80%;
+            font-size: $pdesktop;
+        }
+      
+        .pbeneficio{
+            font-size: 1rem;
+        }
+        
+    }
+}
+
+.h2titulo{
+    
+    margin: 50px auto;
+    width: 100%;    
+    text-align: center;
+    color: $color-main;
+    @include mobile {
+        font-size: $h2mobile;
+    }
+    @include tablet {
+        font-size: $h2tablet;
+    }
+    @include desktop{
+        font-size: $h2desktop;
+    }
+    
+}
