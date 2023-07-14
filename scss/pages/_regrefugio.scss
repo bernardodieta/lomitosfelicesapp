@@ -12,12 +12,16 @@
         .form_iz{
             width: 80%;
         }
+
         
         
        
     }
 
     @include tablet {
+        h3{
+            font-size: 1.4rem;
+        }
        
         flex-direction: row;
         gap: 20px;
@@ -41,17 +45,61 @@
     display: flex;
     flex-direction: column;
     @include mobile {
-
+        h1{
+            font-size: $h1mobile;
+            margin: 0 auto;
+            color:$color-main
+        }
+        h2{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        p{
+            width: 80%;
+            font-size: $pmobile;
+            margin: 0 auto;
+           
+        }
+      
+        .pbeneficio{
+            margin: 0 auto;
+            font-size: 1rem;
+        }
 
     }
     @include tablet {
-
+        h1{
+            font-size: 1.8rem;
+            margin: 0 auto;
+            color:$color-main
+        }
+        h2{
+            text-align: center;
+            font-size: 1.6rem;
+        }
+       
+        p{
+            width: 80%;
+            font-size: $ptablet;
+            margin: 0 auto;
+           
+        }
+      
+        .pbeneficio{
+            margin: 0 auto;
+            font-size: 1rem;
+        }
         
     }
     @include desktop {
         h1{
-            font-size: $h1desktop;
+            font-size: 2.4rem;
             margin: 0 auto;
+            color:$color-main
+        }
+        h2{
+            text-align: center;
+            font-size: 1.8rem;
         }
         p{
             width: 80%;
@@ -78,7 +126,7 @@
         font-size: $h2mobile;
     }
     @include tablet {
-        font-size: $h2tablet;
+        font-size: 1.8rem;
     }
     @include desktop{
         font-size: $h2desktop;

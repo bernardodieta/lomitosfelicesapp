@@ -13,10 +13,12 @@
         padding-right: 10px;
         padding-left: 10px;
         background-color: $color-main;
+        color: $color-second;
 
         &-ul {
             display: flex;
             transition: .4s;
+            
 
         }
 
@@ -25,11 +27,19 @@
             line-height: 40px;
             padding: 0 20px;
             transition: .6s;
+            color: $color-second;
+            font-weight: 600;
+
+            a{
+                color: $color-second;
+                font-weight: 600;
+            }
+            
 
 
             &:hover {
                 background-color: $color-second;
-                color: $color-black;
+                color: $color-second;
 
                 &:hover {
                     a {
@@ -49,7 +59,7 @@
 
             &:hover {
 
-                color: $color-black;
+                color: $color-second;
 
             }
 
