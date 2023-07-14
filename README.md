@@ -10,6 +10,7 @@
 
     Actualmente el sitio consta de 9 sección incluyendo el Index.
 
+    Mapa del sitio
         Index
 
         Adopción (menú de perros en adopción)
@@ -47,7 +48,8 @@
     Website dedicated to the adoption, assistance, and rescue of abandoned or abused dogs.
 
     Currently, the website have 9 sections, including the Index.
-
+    
+    SITE MAP
         Index
 
         Adoption (menu of dogs available for adoption)

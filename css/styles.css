@@ -1754,15 +1754,24 @@ body {
   }
 }
 
+.section__regrefu-texto {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 993px) {
-  .section__reguser-texto h1 {
+  .section__regrefu-texto h1 {
     font-size: 3.5rem;
+    margin: 0 auto;
   }
-  .section__reguser-texto p {
+  .section__regrefu-texto p {
     width: 80%;
     font-size: 1.4rem;
+    margin: 0 auto;
   }
-  .section__reguser-texto .pbeneficio {
+  .section__regrefu-texto .pbeneficio {
+    margin: 0 auto;
     font-size: 1rem;
   }
 }
