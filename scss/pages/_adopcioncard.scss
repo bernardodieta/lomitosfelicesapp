@@ -1,122 +1,125 @@
-.adopcion{
-    padding-top: 50px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.adopcion {
+    width: 90%;
     margin: 0 auto;
-    h1{
-        font-size: $h1desktop;
-        color: $color-main;
-        @include mobile {
-            font-size: $h1mobile;
-        }
-        @include tablet {
-            font-size: $h1tablet;
-            width: 100%;
-            text-align: center;
-            line-height: 2rem;
-           
-        }
-    }
-    &__galeria{
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction:row ;   
-        justify-content: center;
 
-        .imgdestacada{
-            width: 100%;
+    h1 {
+        
+        text-align: center;
+        font-size: $h1mobile;
+        color: $color-main;
+        @include tablet{
+            margin: 30px auto;
+            font-size: $h1tablet;
         }
-        .imgs{
-            width: 100%;
-        }
-        .adopcion__galeria-imgs{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            
-            @include mobile{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-            }
+
+        @include desktop {
+            margin: 30px auto;
+            font-size: $h1desktop;
         }
     }
-    &__description{
-        width: 100%;
+
+    .category {
+        margin-left: 5px;
+        margin-top: 5px;
+        background-color: $color-main;
+        padding: 0px 5px;
+        width: max-content;
+        border-radius: 4px;
+        color: $color-withe;
+    }
+
+    &__galeria {
         display: flex;
         flex-direction: row;
+        width: 100%;
+        max-height: 500px;
+        gap: 2px;
 
-        &-box{
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__description {
+        @include desktop {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__description-box {
+        @include desktop {
             width: 20%;
+            text-align: left;
+
         }
-        &-text{
-            width: 100%;
+
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-size: 1.9rem;
+            color: $color-main;
+            font-weight: 400;
+            margin-bottom: 10px;
+
         }
-        @include mobile {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            &-box{
-               width: 100%; 
-               display: flex;
-               flex-direction: row;
-               align-items: center;
-               justify-content: space-around;
-               gap: 10px;
-              
-            }
-            p{
+
+        h3 {
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+
+
+
+    }
+
+    &__description-text {
+        width: 95%;
+        margin: 0 auto;
+
+        p {
+            text-align: center;
+
+            @include desktop {
                 padding: 10px 0;
-               }
-        }
-        @include tablet {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            &-box{
-               width: 100%; 
-               display: flex;
-               flex-direction: row;
-               align-items: center;
-               justify-content: space-around;
-               gap: 10px;
-              
+                font-size: 1.2rem;
+                text-align: left;
+                
             }
-            p{
-                padding: 10px 0;
-               }
         }
     }
 
     &__btns{
         display: flex;
         flex-direction: row;
-        margin-left: auto;
-        gap: 10px;
-        .btn{
-            min-width: 200px;
+        
+        width: 45%;
+        gap:10px;
+        @include mobile{
+            width:100%;
+            margin: 0 auto;
         }
-      
+        @include tablet{
+            margin: 0 auto;
+        }
+        @include desktop{
+            margin-left: auto;
+        }
+
     }
+
     &__compromiso{
-        margin-top: 50px;
+        margin: 0 auto;
         width: 80%;
-        @include mobile {
-            margin-top: 20px;
-        }
         ol{
+            margin: o auto;
             li{
-                list-style:disc;
                 padding: 10px 0;
-                font-weight: 600;
-                font-size: 0.8rem;
             }
-            
         }
     }
-    
 }

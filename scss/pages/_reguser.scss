@@ -1,4 +1,26 @@
 .background {
+    .h2form {
+        width: max-content;
+        margin: 20px auto;
+        @include mobile{
+            font-size: 1.3rem;
+            
+            
+        }
+        @include tablet{
+            font-size: 1.4rem;
+           
+           
+        }
+        @include desktop{
+            font-size: 1.8rem;
+            
+           
+    
+        }
+      
+        
+    }
 
     .section__form-container {
         @include mobile {
@@ -12,7 +34,7 @@
             .container-derecho {
                 width: 100%;
 
-                h2 {
+                h3 {
                     text-align: center;
                     margin: 20px auto;
                 }
@@ -32,14 +54,16 @@
                 }
 
             }
-            .container-check{
+
+            .container-check {
 
                 width: 100%;
-                display: grid;              
+                display: grid;
                 grid-template-columns: 30px 1fr;
                 grid-template-rows: repeat(2, 1fr);
                 align-items: center;
-                label{
+
+                label {
                     font-size: 1rem;
                 }
             }
@@ -58,7 +82,8 @@
             .container-derecho {
                 width: 100%;
 
-                h2 {
+                h3 {
+                    font-size: 1.4rem;
                     text-align: center;
                     margin: 20px auto;
                 }
@@ -66,21 +91,24 @@
                 label {
                     font-size: $pmobile;
 
-                }             
+                }
 
             }
-            .container-check{
+
+            .container-check {
 
                 width: 100%;
-                display: grid;              
+                display: grid;
                 grid-template-columns: 30px 1fr;
                 grid-template-rows: repeat(2, 1fr);
                 align-items: center;
-                label{
+
+                label {
                     font-size: 1rem;
                 }
             }
         }
+
         @include desktop {
             display: flex;
             flex-direction: row;
@@ -93,7 +121,7 @@
             .container-derecho {
                 width: 100%;
 
-                h2 {
+                h3 {
                     text-align: center;
                     margin: 20px auto;
                 }
@@ -113,19 +141,21 @@
                 }
 
             }
-            .container-check{
+
+            .container-check {
 
                 width: 100%;
-                display: grid;              
+                display: grid;
                 grid-template-columns: 30px 1fr;
                 grid-template-rows: repeat(2, 1fr);
                 align-items: center;
-                label{
+
+                label {
                     font-size: 1rem;
                 }
             }
         }
-        
+
     }
 
 
@@ -173,7 +203,7 @@
 
 
         text-align: center;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
 
         h1 {
@@ -182,10 +212,10 @@
             color: $color-main;
         }
 
-        p {
-            width: 85%;
+        .user-p {
+            width: 90%;
             margin: 0 auto;
-            font-size: $pmobile;
+            font-size: 1.2rem;
         }
 
     }

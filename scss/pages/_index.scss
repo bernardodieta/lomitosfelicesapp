@@ -93,23 +93,26 @@
         .section__card-text {
 
             width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
 
             h1 {
                 padding-left: 10px;
-                width: 100%;
-                font-size: $h1mobile;
+                width: 100%;                
                 line-height: 1.6rem;
             }
             h2 {
                 padding-left: 10px;
-                width: 100%;
-                font-size: $h2mobile;
+                width: 100%;                
                 line-height: 1.6rem;
+            }
+            h3{
+                padding-left: 10px;
+                width: 100%;
             }
 
             p {
-                width: 100%;
-                font-size: $pmobile;
+                width: 100%;                
                 padding-left: 10px;
             }
 
@@ -223,24 +226,24 @@
 
                 width: 70%;
 
-                h1 {
-                    line-height: 2.0rem;
-                    padding-left: 40px;
-                    font-size: $h1tablet;
-
-                }
-                
                 h2 {
                     line-height: 2.0rem;
                     padding-left: 40px;
-                    font-size: $h2tablet;
+                    
+
+                }
+                
+                h3 {
+                    line-height: 2.0rem;
+                    padding-left: 40px;
+                    
 
                 }
 
                 p {
                     padding-top: 10px;
                     padding-left: 40px;
-                    font-size: $ptablet;
+                    
                 }
 
                 .h1invert {
@@ -338,11 +341,11 @@
             width: 100%;
 
 
-            h1 {
+            h2 {
                 width: 100%;
                 font-size: $h1desktop;
             }
-            h2 {
+            h3 {
                 font-size: 1.8rem;
             }
 
@@ -442,10 +445,9 @@
                 font-weight: 100;
             }
 
-            h1 {
+            h2 {
                 line-height: 2.0rem;
 
-                font-size: $h1tablet;
 
             }
 
@@ -455,7 +457,7 @@
 
             p {
                 padding: 10px 0;
-                font-size: $ptablet;
+                
                 width: 100%;
             }
 
@@ -489,9 +491,10 @@
             width: 100%;
             text-align: center;
 
-            h1 {
+            h2 {
                 @include margin(auto, auto);
                 width: 70%;
+                padding-bottom: 20px
             }
 
             p {
@@ -565,20 +568,40 @@
 }
 
 .card {
+  
+    
     @include mobile {
+        .card__carusel-main{
+
+       
         width: 100%;
         display: flex;
         flex-direction: column;
+        transition: .4s;
+        gap: 20px;
+        
         .--status{
             display: none;
         }
+
+        &__text{
+
+            .pmobile {
+                display: flex;
+                width: 80%;
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
+        }
+       
+    }
 
     }
 
     @include tablet {
         padding-top: 50px;
         .card__carusel-main {            
-            width: 70%;
+            width: 100%;
             display: grid;
             margin: 0 auto;
             grid-template-columns: repeat(2, 1fr);
@@ -589,9 +612,10 @@
 
         .card__text {
             width: 100%;
+           
             
-            h1 {
-                font-size:$h1tablet;
+            h2 {
+                
                 color: $color-withe;
                 padding: 0 20px;
             }
@@ -602,6 +626,7 @@
                 align-items: center;
                 justify-content: center;
                 padding-bottom: 20px;
+              
                 .card-sep{
                     max-width: 150px;
                     object-fit: contain;
@@ -622,8 +647,8 @@
             width: 80%;
             display: grid;
             margin: 0 auto;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+           
            
             
         }
@@ -631,8 +656,8 @@
         .card__text {
             width: 100%;
             
-            h1 {
-                font-size:$h1desktop;
+            h2 {
+                
                 color: $color-withe;
                 padding: 0 20px;
             }
@@ -660,9 +685,9 @@
 
     &__text {
 
-        h1 {
+        h2 {
             color: $color-main;
-            font-size: $h1mobile;
+            
             text-align: center;
             padding: 10px 0;
         }
@@ -670,16 +695,24 @@
         p {
             display: flex;
             width: 75%;
+            
             text-align: center;
-            font-size: $pmobile;
+           
             @include margin(auto, auto)
         }
     }
 
     &__carusel-container {
-        width: 100%;
+        margin: 0 auto;;
+        width: max-content;
         display: flex;
         flex-direction: column;
+        transition: .4s;
+        &:hover{
+            transform: scale(1.05);
+        }
+        
+        
 
         .img1-carusel {
             width: 100%;
@@ -688,6 +721,7 @@
             margin-top: 10px;
             margin-bottom: -20px;
             z-index: 1;
+           
 
 
         }
@@ -701,6 +735,7 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             border-radius: 1rem;
+          
         }
 
         .card__header {
@@ -719,6 +754,7 @@
 
         p {
             width: 100%;
+            font-size: 1.1rem;
             padding: 0 5px;
         }
 

@@ -23,12 +23,12 @@
             }
         }
 
-        h2 {
-            font-size: $h2mobile;
-            text-align: center;
-            padding: 10px 0;
-
-        }
+        .h2porqueadoptar {
+            font-size: 1.5rem;
+             text-align: center;
+             padding: 10px 0;
+     
+         }
 
         p {
             text-align: center;
@@ -45,7 +45,7 @@
     margin: 0 auto;
 
     h1 {
-        font-size: $h1mobile;
+        font-size: $h1tablet;
         text-align: center;
     }
 
@@ -60,8 +60,8 @@
         }
     }
 
-    h2 {
-        font-size: $h2mobile;
+    .h2porqueadoptar {
+       font-size: 1.5rem;
         text-align: center;
         padding: 10px 0;
 
@@ -82,7 +82,7 @@
 
     h1 {
         color: $color-main;
-        font-size: $h1desktop;
+        
         text-align: center;
     }
 
@@ -97,17 +97,16 @@
         }
     }
 
-    h2 {
-        color: $color-main;
-        font-size: $h2desktop;
-        text-align: center;
-        padding: 10px 0;
-
-    }
+    .h2porqueadoptar {
+        font-size: 1.8rem;
+         text-align: center;
+         padding: 10px 0;
+ 
+     }
 
     p {
-        font-size: $pdesktop;
-        width: 80%;
+        
+        width: 95%;
         margin:  0 auto;
         text-align: center;
     }

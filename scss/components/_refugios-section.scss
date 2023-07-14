@@ -5,6 +5,7 @@
     margin-right: auto;
     max-width: 1440px;
     margin-top: 50px;
+    padding-bottom: 50px;
     
     @include mobile {
         
@@ -22,16 +23,16 @@
             text-align: center;
             &-text {
 
-                h1 {
+                h3 {
                     width: 90%;
                     margin: 0 auto;
-                    font-size: $h1mobile;
+                    
                     color: $color-main;
                     text-align: center;
                 }
 
                 p {
-                    font-size: $pmobile;
+                    
                     color: $color-black;
                     text-align: center;
                     padding: 10px 0;
@@ -50,17 +51,22 @@
             border-radius: 1.2rem;
             max-width: 204px;
             text-align: center;
+            transition: .4s;
             h3{
                 padding: 5px 0;
+                color: $color-withe;
             }
             h5{
                 padding: 5px 0;
             }
             
-            .mapita {
-                border-radius: 1rem;
+            .mapita {                
                 margin: 0 auto;
 
+            }
+            
+            &:hover{
+                transform: scale(1.05);
             }
         }
 
@@ -70,21 +76,20 @@
 
         &__container {
             margin: 0 auto;
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: row;
             align-items: center;
             text-align: center;
+            padding-bottom: 20px;
 
 
 
             &-text {
                 width: 75%;
 
-                h1 {
-                    width: 100%;
-
-                    font-size: $h1tablet;
+                h3 {
+                    width: 100%;                    
                     color: $color-main;
                     text-align: right;
                     padding: 10px 0;
@@ -92,7 +97,7 @@
 
                 p {
                     width: 100%;
-                    font-size: 1rem;
+                    
                     color: $color-black;
                     text-align: right;
                     padding: 10px 0;
@@ -121,10 +126,14 @@
             max-width: 204px;
             background-color: $color-main;
             border-radius: 1.2rem;
+            transition: .4s;
+           
 
 
             h3 {
+                font-size: 1.4rem;
                 text-align: center;
+                color: $color-withe;
                 padding: 5px 0;
             }
 
@@ -132,6 +141,7 @@
                 margin: 0 auto;
                 text-align: center;
                 width: 90%;
+                font-size: 1rem;
                 
             }
             h5{
@@ -142,11 +152,15 @@
                 text-align: center;
                 margin: 0 auto;
             }
+            
+            &:hover{
+                transform: scale(1.05);
+            }
 
         }
 
         &__box {
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: row;
             gap: 10px;
@@ -155,7 +169,7 @@
             justify-content: space-evenly;
 
             .mapita {
-                border-radius: 1rem;
+                
                 margin: 0 auto;
                 width: 100%;
 
@@ -182,10 +196,9 @@
             &-text {
                 width: 75%;
 
-                h1 {
+                h3 {
                     width: 100%;
-
-                    font-size: $h1desktop;
+                    font-size: 1.9rem;
                     color: $color-main;
                     text-align: right;
                     padding: 10px 0;
@@ -193,7 +206,7 @@
 
                 p {
                     width: 100%;
-                    font-size: $pdesktop;
+                    font-size: 1.2rem;
                     color: $color-black;
                     text-align: right;
                     padding: 10px 0;
@@ -221,28 +234,37 @@
             max-width: 204px;
             background-color: $color-main;
             border-radius: 1.2rem;
+            cursor: pointer;
+            transition: .4s;
 
 
             h3 {
                 text-align: center;
                 padding: 5px 0;
+                color: $color-withe;
+                font-size: 1.4rem;
             }
 
             p {
                 margin: 0 auto;
                 text-align: center;
                 width: 90%;
+                font-size: 1rem;
                 
             }
             h5{
                 padding: 5px 0;
-            }
-
-            h5 {
                 text-align: center;
                 margin: 0 auto;
+                
             }
 
+            &:hover{
+                transform: scale(1.05);
+
+            }
+
+           
         }
 
         &__box {
@@ -255,7 +277,7 @@
             justify-content: space-evenly;
 
             .mapita {
-                border-radius: 1rem;
+                
                 margin: 0 auto;
 
             }

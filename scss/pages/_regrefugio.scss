@@ -6,8 +6,13 @@
     justify-content: center;
     
     @include mobile {
-        
+        width:100%;
         flex-direction: column;
+
+        .form_iz{
+            width: 80%;
+        }
+        
         
        
     }

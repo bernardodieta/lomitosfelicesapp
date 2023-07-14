@@ -22,7 +22,30 @@
         
         padding: 0 10px;
     }
+    &:hover{
+        background-color: $color-hover;        
+        max-width: 265px; 
+        font-size:1.1rem ;
+        transition: 0.2s;
+    }
 
    
 }
 
+
+.btn__card{
+    display: flex;    
+    width: max-content;         
+    padding: .4rem 1.2rem;
+    border-radius: 10px;
+    background-color: $color-second;
+    margin: 10px auto;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-hover;        
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+}
