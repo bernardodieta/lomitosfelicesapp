@@ -31,7 +31,8 @@
 
         Sección para reportar perros perdidos.
 
-        Sección para tienda de alimentos y necesidades materiales para los perros y refugios para que de esta manera el usuario pueda comprar un producto y se envíe directamente al refugio que selecciono.
+        Sección para tienda de alimentos y necesidades materiales para los perros y refugios
+        para que de esta manera el usuario pueda comprar un producto y se envíe directamente al refugio que selecciono.
 
         Sección para ofrecer tu casa como refugio temporal.
 
@@ -70,7 +71,8 @@
 
         Section for reporting lost dogs.
 
-        Section for a store selling food and material needs for dogs and shelters, allowing users to purchase a product and have it directly sent to the selected shelter.
+        Section for a store selling food and material needs for dogs and shelters, allowing users to 
+        purchase a product and have it directly sent to the selected shelter.
 
         Section to offer your home as a temporary shelter.
 
